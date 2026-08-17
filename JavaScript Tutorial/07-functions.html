@@ -15,6 +15,46 @@
 
 
     <script>
+
+        /*function greet(name) {
+
+            if (!name) {
+                console.log('Hi there!');
+            } else {
+                console.log(`Hello ${name}!`)
+            }
+            
+            
+        }
+
+        greet('Marvellous');
+        greet('Simon');
+        greet();*/
+
+        /*function convertToFahrenheit(celsius) {
+            return (celsius * 9 / 5) + 32;
+        }
+        
+
+        function convertToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+        
+
+        function convertTemperature(degrees, unit) {
+            if (unit === 'C') {
+                const result = convertToFahrenheit(degrees);
+                return `${result}F`;
+
+            } else if (unit === 'F') {
+                const result =convertToCelsius(degrees);
+                return `${result}C`;
+            }
+        }
+
+        console.log(convertTemperature(25, 'C'));
+        console.log(convertTemperature(50, 'F'));*/
+
         /*function function1() {
             console.log('Hello');
             console.log(2 + 2);
@@ -24,12 +64,47 @@
         function1();
         */
 
-        function calculateTax(cost, taxPercent) {
-            console.log(cost * 0.1);
-        }
+        /* function calculateTax(cost, taxPercent) {
+             console.log(cost * taxPercent);
+         }
+ 
+         calculateTax(4000, 0.1);
+         calculateTax(10000, 0.2);*/
 
-        calculateTax(4000);
-        calculateTax(10000);
+         function convertLength(length, from, to) {
+
+            if (from !== 'km' && from !== 'miles' && from !== 'ft') {
+                return `invalid input ${from}`;
+            } else if (to !== 'km' && to !== 'miles' && to !== 'ft') {
+                return `invalid input ${to}`;
+            }
+
+            if (from === 'km' && to === 'miles') {
+                return `${length / 1.6}miles`;
+            } else if (from === 'miles' && to === 'km') {
+                return `${length * 1.6}km`;
+            } else if (from === to) {
+                return `${length} ${to}`;
+            } else if (from === 'miles' && to === 'ft') {
+                return `${length * 5280}ft`;
+            } else if (from === 'ft' && to === 'miles') {
+                return `${length / 5280}miles`;
+            } else if (from === 'km' && to === 'ft') {
+                return `${length * 3281}ft`;
+            } else if (from === 'ft' && to === 'km') {
+                return `${length / 3281}km`;
+            }
+         }
+
+         console.log(convertLength(25, 'miles', 'km'));
+         console.log(convertLength(35, 'km', 'miles'));
+         console.log(convertLength(45, 'miles', 'miles'));
+         console.log(convertLength(45, 'miles', 'ft'));
+         console.log(convertLength(45, 'ft', 'miles'));
+         console.log(convertLength(45, 'km', 'ft'));
+         console.log(convertLength(5, 'ft', 'km'));
+         console.log(convertLength(50, 'lbs', 'lbs'));
+
     </script>
 </body>
 
